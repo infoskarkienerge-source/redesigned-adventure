@@ -27,7 +27,7 @@ def contact():
         email = request.form.get('email')
         message = request.form.get('message')
         
-        # Qui puoi aggiungere la logica per inviare email
+        # Qui puoi aggiungere la logica per inviare emailP
         flash('Votre message a été envoyé avec succès ! Nous vous contacterons rapidement.', 'success')
         return redirect(url_for('contact'))
     
