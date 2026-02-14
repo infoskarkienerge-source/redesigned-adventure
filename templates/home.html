@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block title %}KARKIENERGE - Expert en Électricité et Maintenance Industrielle{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-8 mx-auto text-center hero-content">
+                <div class="hero-badge mb-4">
+                    <span class="badge bg-gold text-dark px-3 py-2">+30 ans d'expertise</span>
+                </div>
+                <h1 class="hero-title mb-4">
+                    Votre Partenaire <span class="text-gold">Énergie</span> de Confiance
+                </h1>
+                <p class="hero-subtitle mb-5">
+                    Expertise en installations électriques HTB, HTA et BT, plomberie et maintenance industrielle. 
+                    Des solutions fiables, sécurisées et conformes aux normes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/212671861414" class="btn btn-gold btn-lg me-3 mb-2" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg mb-2">
+                        Nos Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <a href="#services" class="scroll-down">
+            <i class="bi bi-chevron-down"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5 bg-dark">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <div class="stat-item">
+                    <div class="stat-number text-gold">30+</div>
+                    <div class="stat-label text-light">Années d'expérience</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <div class="stat-item">
+                    <div class="stat-number text-gold">100%</div>
+                    <div class="stat-label text-light">Satisfaction client</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <div class="stat-number text-gold">24/7</div>
+                    <div class="stat-label text-light">Service d'urgence</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <div class="stat-number text-gold">Certifié</div>
+                    <div class="stat-label text-light">Normes internationales</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="section-subtitle">Nos Expertises</span>
+            <h2 class="section-title">Nos Services</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+                    <h4>Électricité Bâtiment</h4>
+                    <p>Installations électriques complètes pour bâtiments résidentiels et commerciaux. Câblage, tableaux, éclairage et mise en conformité.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-building-gear"></i>
+                    </div>
+                    <h4>Électricité Industrielle</h4>
+                    <p>Solutions électriques pour industries et infrastructures. Installations HTB, HTA et BT, automatisme et contrôle de processus.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-bounding-box"></i>
+                    </div>
+                    <h4>Postes HT/MT/BT</h4>
+                    <p>Installation et maintenance de postes de transformation Moyenne et Basse Tension. Expertise certifiée et équipements de qualité.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4>Sécurité & Conformité</h4>
+                    <p>Audit, mise en conformité réglementaire et sécurité électrique. Protection des biens et des personnes selon les normes en vigueur.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-sun-fill"></i>
+                    </div>
+                    <h4>Énergies Renouvelables</h4>
+                    <p>Installation de systèmes solaires photovoltaïques et solutions d'économie d'énergie pour réduire votre empreinte carbone.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h4>Maintenance</h4>
+                    <p>Contrats de maintenance préventive et corrective. Intervention rapide, diagnostic expert et réparation de pannes électriques.</p>
+                    <a href="{{ url_for('services') }}" class="service-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-us-section py-5 bg-light">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="section-subtitle">Notre Différence</span>
+            <h2 class="section-title">Pourquoi Nous Choisir ?</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                    <h4>Qualité Certifiée</h4>
+                    <p>Respect strict des normes techniques et de sécurité. Travaux garantis avec finitions soignées et matériaux de première qualité.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h4>Sécurité Garantie</h4>
+                    <p>Protocoles de sécurité rigoureux, équipements certifiés et personnel formé aux dernières normes de prévention des risques.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h4>Réactivité 24/7</h4>
+                    <p>Intervention rapide en cas d'urgence. Service disponible 7j/7 pour les dépannages critiques et maintenance corrective.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-file-text-fill"></i>
+                    </div>
+                    <h4>Devis Transparents</h4>
+                    <p>Estimations détaillées sans surprise. Politique tarifaire compétitive et honnête pour tous types de projets.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h4>Respect des Délais</h4>
+                    <p>Planification rigoureuse et respect des échéances contractuelles. Votre satisfaction est notre priorité absolue.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card text-center h-100">
+                    <div class="why-icon">
+                        <i class="bi bi-person-check-fill"></i>
+                    </div>
+                    <h4>Expertise Confirmée</h4>
+                    <p>Plus de 30 ans d'expérience dirigée par KIKI ABDELHAQ. Une expertise reconnue dans les réseaux HTB, HTA et BT.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Preview Section -->
+<section class="gallery-preview-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="section-subtitle">Notre Savoir-Faire</span>
+            <h2 class="section-title">Nos Réalisations</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="row g-3">
+            <div class="col-md-4 col-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/work1.jpeg') }}" alt="Poste de transformation" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/work2.jpeg') }}" alt="Panneau de contrôle" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='img/work3.jpeg') }}" alt="Quadre électrique Schneider" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('gallery') }}" class="btn btn-outline-gold btn-lg">
+                Voir Toutes les Réalisations
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="cta-box text-center">
+            <h2 class="mb-3">Besoin d'un Devis Gratuit ?</h2>
+            <p class="mb-4 lead">Contactez-nous dès maintenant pour une étude personnalisée de votre projet électrique ou industriel.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/212671861414" class="btn btn-light btn-lg me-3 mb-2" target="_blank">
+                    <i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg mb-2">
+                    <i class="bi bi-envelope me-2"></i>Formulaire de Contact
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-content">
+                    <span class="section-subtitle">À Propos</span>
+                    <h2 class="section-title text-start">KARKIENERGE</h2>
+                    <div class="section-line mb-4"></div>
+                    <p class="lead">
+                        Entreprise spécialisée dans les travaux d'électricité, de plomberie et les travaux techniques associés.
+                    </p>
+                    <p>
+                        Basée à <strong>Rabat</strong>, KARKIENERGE s'appuie sur l'expertise de professionnels qualifiés 
+                        dirigés par <strong>KIKI ABDELHAQ</strong>, bénéficiant d'une expérience de plus de 30 ans dans 
+                        les travaux électiques aux réseaux HTB, HTA et BT.
+                    </p>
+                    <p>
+                        Notre mission est de fournir des prestations fiables et conformes aux normes en vigueur, 
+                        en garantissant un haut niveau de qualité, de sécurité et de respect des délais contractuels.
+                    </p>
+                    <div class="mt-4">
+                        <a href="{{ url_for('contact') }}" class="btn btn-gold">Nous Contacter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='img/work4.jpeg') }}" alt="Installation électrique" class="img-fluid rounded shadow-lg">
+                    <div class="experience-badge">
+                        <span class="years">30+</span>
+                        <span class="text">Années d'expérience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

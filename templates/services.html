@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+
+{% block title %}Nos Services - KARKIENERGE{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="page-title">Nos Services</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Detail Section -->
+<section class="services-detail-section py-5">
+    <div class="container">
+        
+        <!-- Service 1: Électricité Bâtiment -->
+        <div class="service-detail-row row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work1.jpeg') }}" alt="Électricité Bâtiment" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Installations Électriques Bâtiment</h2>
+                    <p class="service-description">
+                        Solutions électriques complètes pour tous types de bâtiments : résidentiels, commerciaux et tertiaires.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation électrique complète (HTB, HTA et BT)</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Câblage et installation de tableaux électriques</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Éclairage intérieur et extérieur (LED, spots, néons)</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Mise en conformité des installations existantes</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de prises, interrupteurs et domotique</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Diagnostic et dépannage électrique</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un devis pour une installation électrique bâtiment." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Électricité Industrielle -->
+        <div class="service-detail-row row align-items-center mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work2.jpeg') }}" alt="Électricité Industrielle" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-building-gear"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Électricité Industrielle</h2>
+                    <p class="service-description">
+                        Expertise industrielle pour installations complexes, automatismes et contrôle de processus de production.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installations électriques industrielles haute puissance</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Automatisme et contrôle commande</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Câblage de machines et équipements industriels</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Tableaux de distribution industriels</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de variateurs de vitesse</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Mise en service et commissioning</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un devis pour un projet d'électricité industrielle." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Postes HT/MT/BT -->
+        <div class="service-detail-row row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work3.jpeg') }}" alt="Postes HT/MT/BT" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-bounding-box"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Postes Électriques HT/MT/BT</h2>
+                    <p class="service-description">
+                        Installation et maintenance de postes de transformation Moyenne Tension (MT) et Basse Tension (BT).
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de postes de transformation HT/MT/BT</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Maintenance préventive des transformateurs</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Cellules MT et protection</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Mise à la terre et équipotentialité</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Mesures et essais électriques</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Consignation et déconsignation</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un devis pour un poste HT/MT/BT." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 4: Sécurité -->
+        <div class="service-detail-row row align-items-center mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work4.jpeg') }}" alt="Sécurité Électrique" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Sécurité Électrique & Mise en Conformité</h2>
+                    <p class="service-description">
+                        Audit, contrôle et mise aux normes de vos installations électriques pour garantir la sécurité des biens et des personnes.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Vérification périodique des installations (VPI)</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Mise en conformité NFC 15-100</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Étude et réalisation de la mise à la terre</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de parafoudres et protections</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Rapports de conformité et attestations</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Formation à la sécurité électrique</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un audit de conformité électrique." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 5: Énergies Renouvelables -->
+        <div class="service-detail-row row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work5.jpeg') }}" alt="Énergies Renouvelables" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-sun-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Énergies Renouvelables</h2>
+                    <p class="service-description">
+                        Solutions durables pour réduire votre empreinte énergétique et maîtriser vos coûts énergétiques.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de panneaux solaires photovoltaïques</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Étude de faisabilité et rentabilité</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Installation de chauffe-eau solaires</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Systèmes de stockage d'énergie (batteries)</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Éclairage solaire extérieur</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Audit énergétique et conseil</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un devis pour des énergies renouvelables." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 6: Maintenance -->
+        <div class="service-detail-row row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='img/work2.jpeg') }}" alt="Maintenance" class="img-fluid rounded shadow">
+                    <div class="service-badge">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="service-content">
+                    <h2 class="service-title">Maintenance Préventive & Corrective</h2>
+                    <p class="service-description">
+                        Contrats de maintenance sur mesure pour assurer la disponibilité et la longévité de vos installations.
+                    </p>
+                    <ul class="service-list">
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Contrats de maintenance préventive</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Intervention d'urgence 24h/24 et 7j/7</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Diagnostic et dépannage rapide</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Remplacement de composants défectueux</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Maintenance multi-technique</li>
+                        <li><i class="bi bi-check-circle-fill text-gold"></i> Rapports d'intervention détaillés</li>
+                    </ul>
+                    <a href="https://wa.me/212671861414?text=Bonjour, je souhaite un contrat de maintenance." class="btn btn-gold mt-3" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Plomberie Section -->
+<section class="plomberie-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="section-header mb-4">
+                    <span class="section-subtitle">Service Complémentaire</span>
+                    <h2 class="section-title">Travaux de Plomberie</h2>
+                    <div class="section-line mx-auto"></div>
+                </div>
+                <p class="lead mb-4">
+                    En plus de notre expertise électrique, nous réalisons tous types de travaux de plomberie pour logements et locaux professionnels.
+                </p>
+                <div class="row text-start">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled service-list">
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Installation de réseaux d'eau potable</li>
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Installation de réseaux d'évacuation</li>
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Pose d'équipements sanitaires</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled service-list">
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Détection et réparation de fuites</li>
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Installation de conduites d'eau et de gaz</li>
+                            <li><i class="bi bi-check-circle-fill text-gold me-2"></i> Maintenance préventive et corrective</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container text-center">
+        <h2 class="mb-3">Un Projet en Tête ?</h2>
+        <p class="lead mb-4">Contactez-nous pour une étude gratuite et personnalisée de vos besoins.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">
+            <i class="bi bi-envelope me-2"></i>Nous Contacter
+        </a>
+    </div>
+</section>
+{% endblock %}

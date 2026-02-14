@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - KARKIENERGE{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="page-title">Contactez-Nous</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="contact-info-card">
+                    <div class="section-header mb-4">
+                        <span class="section-subtitle">Informations</span>
+                        <h3 class="h2">Nos Coordonnées</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Adresse</h5>
+                            <p>Rabat, Maroc</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Téléphone</h5>
+                            <p>
+                                <a href="tel:+212671861414">+212 671 861 414</a><br>
+                                <a href="tel:+212662223272">+212 662 223 272</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email</h5>
+                            <p><a href="mailto:info@karkienerge.com">info@karkienerge.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Horaires</h5>
+                            <p>Lun - Sam: 8h00 - 18h00<br>
+                            <span class="text-gold">Urgence: 24h/24 - 7j/7</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="whatsapp-card mt-4 p-4 bg-success bg-opacity-10 rounded">
+                        <h5 class="text-success mb-3"><i class="bi bi-whatsapp me-2"></i>Devis Rapide WhatsApp</h5>
+                        <p class="mb-3">Obtenez une réponse rapide pour vos demandes urgentes.</p>
+                        <a href="https://wa.me/212671861414" class="btn btn-success w-100" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>Discuter sur WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-card">
+                    <div class="section-header mb-4">
+                        <span class="section-subtitle">Formulaire</span>
+                        <h3 class="h2">Envoyez-nous un Message</h3>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                                    <label for="name"><i class="bi bi-person me-2"></i>Nom complet *</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Téléphone" required>
+                                    <label for="phone"><i class="bi bi-telephone me-2"></i>Téléphone *</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <label for="email"><i class="bi bi-envelope me-2"></i>Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="subject" name="subject">
+                                        <option value="" selected>Sélectionnez un service</option>
+                                        <option value="electricite">Électricité Bâtiment</option>
+                                        <option value="industriel">Électricité Industrielle</option>
+                                        <option value="mtbt">Postes HT/MT/BT</option>
+                                        <option value="securite">Sécurité & Conformité</option>
+                                        <option value="solaire">Énergies Renouvelables</option>
+                                        <option value="maintenance">Maintenance</option>
+                                        <option value="plomberie">Plomberie</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                    <label for="subject"><i class="bi bi-tag me-2"></i>Type de service</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 150px" required></textarea>
+                                    <label for="message"><i class="bi bi-chat-text me-2"></i>Votre message *</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gold btn-lg w-100">
+                                    <i class="bi bi-send-fill me-2"></i>Envoyer le Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="form-note mt-3 text-muted small">
+                        <i class="bi bi-shield-check me-1"></i> Vos données sont protégées et ne seront jamais partagées avec des tiers.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5 bg-light">
+    <div class="container">
+        <div class="section-header text-center mb-4">
+            <span class="section-subtitle">Localisation</span>
+            <h3 class="h2">Où Nous Trouver</h3>
+            <div class="section-line mx-auto"></div>
+        </div>
+        <div class="map-container rounded overflow-hidden shadow-lg">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105884.99967233767!2d-6.9278384!3d34.020882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Maroc!5e0!3m2!1sfr!2sfr!4v1707830400000!5m2!1sfr!2sfr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency CTA -->
+<section class="emergency-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+                <h3 class="mb-2"><i class="bi bi-exclamation-triangle-fill text-gold me-2"></i>Urgence Électrique ?</h3>
+                <p class="mb-0 lead">Notre service d'intervention d'urgence est disponible 24h/24 et 7j/7.</p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <a href="tel:+212671861414" class="btn btn-gold btn-lg">
+                    <i class="bi bi-telephone-fill me-2"></i>Appeler Maintenant
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
