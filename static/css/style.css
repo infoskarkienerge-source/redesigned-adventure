@@ -177,11 +177,6 @@ a {
 .hero-section {
     height: 100vh;
     min-height: 700px;
-    background: linear-gradient(135deg,
-            #0E5C2C 0%,
-            #2E9E2E 40%,
-            #7ED957 70%,
-            #D4AF37 100%);
     position: relative;
     display: flex;
     align-items: center;
