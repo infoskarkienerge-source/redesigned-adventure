@@ -130,8 +130,8 @@ a {
 }
 
 #mainNav.scrolled {
-   
-    backdrop-filter: blur(10px);
+
+    backdrop-filter: blur(4px);
     padding: 10px 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -200,6 +200,7 @@ a {
 }
 
 .hero-overlay {
+    filter: blur(4px);
     position: absolute;
     top: 0;
     left: 0;
@@ -300,8 +301,9 @@ a {
 
 /* Stats Section */
 .stats-section {
-    background: var(--dark-color);
+    background: linear-gradient(to bottom, #ad9851, #459547);
     border-top: 3px solid var(--gold-color);
+    border-bottom: 3px solid #06e006;
 }
 
 .stat-item {
@@ -538,11 +540,7 @@ a {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg,
-            #0E5C2C 0%,
-            #2E9E2E 40%,
-            #7ED957 70%,
-            #D4AF37 100%);
+    background: linear-gradient(to bottom, #f8f9fa, #33a131);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
