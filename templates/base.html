@@ -34,10 +34,102 @@
 
 <body>
     <!-- Navigation -->
+    <style>
+        :root {
+            /* Oro + Verde (puoi ritoccare i valori) */
+            --gold-1: #f7d36a;
+            --gold-2: #d79a14;
+            --gold-3: #8a5b00;
+
+            --green-1: #7cff00;
+            --green-2: #2fb800;
+            --green-3: #0a5a00;
+
+            --stroke: #2b1b00;
+        }
+
+      
+
+        .brand {
+            display: inline-flex;
+            align-items: flex-end;
+            line-height: 1;
+            font-weight: 500;
+            text-transform: uppercase;
+            user-select: none;
+            position: relative;
+            padding-bottom: 14px;
+            filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .35));
+        }
+
+        .karki {
+            font-size: 25px;
+            background: linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, var(--gold-3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(60, 35, 0, .55);
+        }
+
+        .energe {
+            font-size: 25px;
+            background: linear-gradient(180deg, var(--green-1), var(--green-2) 55%, var(--green-3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(0, 30, 0, .45);
+        }
+
+        .bolt {
+            font-size: 35px;
+            line-height: .9;
+            transform: translateY(3px);
+            background: linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, var(--gold-3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(60, 35, 0, .55);
+            text-shadow: 0 0 18px rgba(215, 154, 20, .25);
+        }
+
+        /* Linea gold sotto */
+        .brand::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 2px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--gold-3), var(--gold-2), var(--gold-1), var(--gold-2), var(--gold-3));
+            box-shadow: 0 6px 16px rgba(215, 154, 20, .18);
+        }
+
+        /* Responsive */
+        @media (max-width:520px) {
+
+            .karki,
+            .energe {
+                font-size: 40px;
+            }
+
+            .bolt {
+                font-size: 44px;
+            }
+
+            .brand {
+                padding-bottom: 12px;
+            }
+        }
+    </style>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="KARKIENERGE" height="50">
+                <div class="brand" aria-label="KARKI ENERGE">
+                    <span class="karki">KARKI</span>
+                    <span class="bolt" aria-hidden="true">⚡</span>
+                    <span class="energe">ENERGE</span>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -94,8 +186,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="KARKI ENERGE" height="60"
-                        class="mb-3">
+                    
                     <p class="text-light opacity-75">
                         Expert en travaux électriques, plomberie et maintenance industrielle.
                         Plus de 30 ans d'expérience à votre service.
