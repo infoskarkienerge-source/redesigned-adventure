@@ -393,7 +393,7 @@ a {
 }
 
 .service-card:hover::before {
-   /* transform: scaleX(1);*/
+    /* transform: scaleX(1);*/
 }
 
 .service-icon {
@@ -411,7 +411,7 @@ a {
 }
 
 .service-card:hover .service-icon {
-   transform: rotateY(180deg);
+    transform: rotateY(180deg);
     background: linear-gradient(135deg, var(--green-color) 0%, var(--green-light) 100%);
 }
 
@@ -539,7 +539,11 @@ a {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--dark-light) 100%);
+     background: linear-gradient(135deg,
+            #0E5C2C 0%,
+            #2E9E2E 40%,
+            #7ED957 70%,
+            #D4AF37 100%);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -828,7 +832,11 @@ a {
 }
 
 .emergency-section {
-    background: var(--dark-color);
+    background: linear-gradient(135deg,
+            #0E5C2C 0%,
+            #2E9E2E 40%,
+            #7ED957 70%,
+            #D4AF37 100%);
     color: var(--white);
 }
 
