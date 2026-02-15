@@ -48,7 +48,7 @@
             --stroke: #2b1b00;
         }
 
-      
+
 
         .brand {
             display: inline-flex;
@@ -186,7 +186,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    
+
                     <p class="text-light opacity-75">
                         Expert en travaux électriques, plomberie et maintenance industrielle.
                         Plus de 30 ans d'expérience à votre service.
@@ -259,6 +259,15 @@
                 navbar.classList.remove('scrolled');
                 backToTop.classList.remove('show');
             }
+        });
+
+        document.querySelector('.back-to-top').addEventListener('click', function (event) {
+            event.preventDefault(); // opzionale se è un link
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Smooth scroll for anchor links
